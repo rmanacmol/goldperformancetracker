@@ -1,5 +1,15 @@
 # Golf Performance Tracker
 
+<p align="center">
+  <video src="docs/demo/app-demo.webm" poster="docs/demo/app-demo-poster.png" controls width="280">
+    <a href="docs/demo/app-demo.webm">Download the app demo video</a>
+  </video>
+</p>
+
+<p align="center"><em>Player list → search &amp; filter → detail → stats chart → offline banner</em></p>
+
+---
+
 An Android app for browsing golf players and their shot performance metrics. Built with **Clean Architecture**, **MVVM**, and an **offline-first** data layer.
 
 This README explains **what languages and libraries we use**, **how the project is organized**, and **where to start reading the code** if you are reviewing or extending it.
@@ -10,13 +20,7 @@ For deeper design rationale, see [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## App demo
 
-Screen recording of the full app walkthrough (player list → search/filter → detail → stats → offline banner):
-
-<video src="docs/demo/app-demo.webm" controls width="100%">
-  Your browser does not support embedded video. <a href="docs/demo/app-demo.webm">Download the demo video</a>.
-</video>
-
-Direct link: [docs/demo/app-demo.webm](docs/demo/app-demo.webm)
+See the **video preview at the top** of this README, or open [docs/demo/app-demo.webm](docs/demo/app-demo.webm) directly.
 
 **What the demo shows:**
 - Player list with search and club filter
