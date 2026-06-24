@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="metric_bar_height">6dp</dimen>
+    <dimen name="metric_bar_gap">4dp</dimen>
+    <dimen name="metric_bar_corner_radius">3dp</dimen>
+    <dimen name="chart_default_height">180dp</dimen>
+    <dimen name="chart_label_text_size">10sp</dimen>
+    <dimen name="chart_grid_stroke">1dp</dimen>
+</resources>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Golf Performance Tracker</string>
+    <string name="players_title">Players</string>
+    <string name="player_detail_title">Player Detail</string>
+    <string name="search_players_hint">Search by name or club</string>
+    <string name="filter_all_clubs">All clubs</string>
+    <string name="offline_banner">Offline mode — showing cached data. Sync resumes when connected.</string>
+    <string name="empty_players">No players match your search.</string>
+    <string name="shots_title">Recent Shots</string>
+    <string name="player_avatar_content_description">Player avatar</string>
+    <string name="metric_ball_speed_value">%.1f mph</string>
+    <string name="metric_launch_angle_value">%.1f° launch</string>
+    <string name="metric_carry_distance_value">%.1f yds</string>
+    <string name="metric_spin_rate_value">%.0f rpm</string>
+    <string name="action_view_stats">View stats</string>
+    <string name="stats_screen_title">Performance Stats</string>
+    <string name="stats_title">%1$s — Stats</string>
+    <string name="stats_shot_count">%1$d shots recorded</string>
+    <string name="stats_max_speed">Max: %.1f mph</string>
+    <string name="stats_min_speed">Min: %.1f mph</string>
+    <string name="stats_speed_chart_title">Ball speed trend</string>
+    <string name="stats_carry_progress_title">Average carry distance</string>
+    <string name="stats_empty_chart">No shot data available for charting.</string>
+</resources>

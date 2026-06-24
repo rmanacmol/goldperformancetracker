@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="golf_green">#1B5E20</color>
+    <color name="golf_green_dark">#0D3311</color>
+    <color name="golf_green_light">#4CAF50</color>
+    <color name="golf_accent">#FFC107</color>
+    <color name="golf_surface">#F5F7F4</color>
+    <color name="golf_on_surface">#1A1C19</color>
+    <color name="offline_banner">#FFF3E0</color>
+    <color name="metric_speed">#2E7D32</color>
+    <color name="metric_launch">#558B2F</color>
+    <color name="metric_distance">#33691E</color>
+    <color name="metric_track">#E0E0E0</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>

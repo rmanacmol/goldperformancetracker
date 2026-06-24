@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/shotClub"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?attr/textAppearanceTitleSmall"
+                tools:text="Driver" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/shotTimestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:textColorSecondary"
+                tools:text="Apr 25, 2024" />
+
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:columnCount="2">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/shotBallSpeed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAppearance="?attr/textAppearanceBody2"
+                tools:text="170.2 mph" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/shotLaunchAngle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAppearance="?attr/textAppearanceBody2"
+                tools:text="12.1°" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/shotCarryDistance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAppearance="?attr/textAppearanceBody2"
+                tools:text="268.0 yds" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/shotSpinRate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAppearance="?attr/textAppearanceBody2"
+                tools:text="2500 rpm" />
+
+        </GridLayout>
+
+        <com.renz.golfperformancetracker.ui.common.PerformanceMetricBarView
+            android:id="@+id/shotMetricBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="golf_surface">#121512</color>
+    <color name="golf_on_surface">#E2E3DD</color>
+    <color name="offline_banner">#3E2723</color>
+    <color name="metric_track">#424242</color>
+</resources>

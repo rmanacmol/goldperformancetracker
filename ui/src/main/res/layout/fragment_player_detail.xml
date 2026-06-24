@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:menu="@menu/menu_player_detail"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="@string/player_detail_title"
+        app:titleTextColor="?attr/colorOnPrimary" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/offlineBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/offline_banner"
+                android:padding="12dp"
+                android:text="@string/offline_banner"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/loadingIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:visibility="gone" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/statsCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+
+                <androidx.constraintlayout.motion.widget.MotionLayout
+                    android:id="@+id/statsMotionLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutDescription="@xml/scene_player_stats">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/playerAvatar"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:contentDescription="@string/player_avatar_content_description"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Golf.Circle"
+                        tools:src="@drawable/ic_golf_avatar_placeholder" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/playerName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                        tools:text="Jordan Lee" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/playerClub"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:textColorSecondary"
+                        tools:text="Driver" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/avgBallSpeed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceBody1"
+                        tools:text="168.4 mph avg speed" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/avgLaunchAngle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        tools:text="12.5° launch" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/avgCarryDistance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        tools:text="265.0 yds carry" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/avgSpinRate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        tools:text="2450 rpm spin" />
+
+                    <com.renz.golfperformancetracker.ui.common.PerformanceMetricBarView
+                        android:id="@+id/detailMetricBar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                </androidx.constraintlayout.motion.widget.MotionLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/shots_title"
+                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/shotsLoading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:indeterminate="true"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shotsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_shot" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

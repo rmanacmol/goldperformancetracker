@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/playerListFragment">
+
+    <fragment
+        android:id="@+id/playerListFragment"
+        android:name="com.renz.golfperformancetracker.ui.players.list.PlayerListFragment"
+        android:label="@string/players_title"
+        tools:layout="@layout/fragment_player_list">
+        <action
+            android:id="@+id/action_playerList_to_playerDetail"
+            app:destination="@id/playerDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/playerDetailFragment"
+        android:name="com.renz.golfperformancetracker.ui.players.detail.PlayerDetailFragment"
+        android:label="@string/player_detail_title"
+        tools:layout="@layout/fragment_player_detail">
+        <argument
+            android:name="playerId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_playerDetail_to_playerStats"
+            app:destination="@id/playerStatsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/playerStatsFragment"
+        android:name="com.renz.golfperformancetracker.ui.stats.PlayerStatsFragment"
+        android:label="@string/stats_screen_title"
+        tools:layout="@layout/fragment_player_stats">
+        <argument
+            android:name="playerId"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
