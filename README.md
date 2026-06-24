@@ -8,18 +8,37 @@ For deeper design rationale, see [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ---
 
+## App demo
+
+Screen recording of the full app walkthrough (player list → search/filter → detail → stats → offline banner):
+
+<video src="docs/demo/app-demo.webm" controls width="100%">
+  Your browser does not support embedded video. <a href="docs/demo/app-demo.webm">Download the demo video</a>.
+</video>
+
+Direct link: [docs/demo/app-demo.webm](docs/demo/app-demo.webm)
+
+**What the demo shows:**
+- Player list with search and club filter
+- Player detail with paginated shots and expandable stats card
+- Stats chart screen (toolbar chart icon)
+- Pull-to-refresh sync
+
+---
+
 ## Table of contents
 
-1. [What this app does](#what-this-app-does)
-2. [Languages & technologies](#languages--technologies)
-3. [Project structure (how to read it)](#project-structure-how-to-read-it)
-4. [Module-by-module guide](#module-by-module-guide)
-5. [Screen map & navigation](#screen-map--navigation)
-6. [Data flow (end to end)](#data-flow-end-to-end)
-7. [Where to start reading](#where-to-start-reading)
-8. [Setup & build](#setup--build)
-9. [Testing](#testing)
-10. [Further reading](#further-reading)
+1. [App demo](#app-demo)
+2. [What this app does](#what-this-app-does)
+3. [Languages & technologies](#languages--technologies)
+4. [Project structure (how to read it)](#project-structure-how-to-read-it)
+5. [Module-by-module guide](#module-by-module-guide)
+6. [Screen map & navigation](#screen-map--navigation)
+7. [Data flow (end to end)](#data-flow-end-to-end)
+8. [Where to start reading](#where-to-start-reading)
+9. [Setup & build](#setup--build)
+10. [Testing](#testing)
+11. [Further reading](#further-reading)
 
 ---
 
@@ -121,7 +140,10 @@ goldperformancetracker/
 ├── ui/                     # Screens, ViewModels, layouts, navigation
 ├── gradle/
 │   └── libs.versions.toml  # Shared dependency versions
-├── docs/screenshots/       # Place demo screenshots here
+├── docs/
+│   ├── demo/
+│   │   └── app-demo.webm     # Screen recording walkthrough
+│   └── screenshots/          # Place demo screenshots here
 ├── README.md               # This file
 └── ARCHITECTURE.md         # Design decisions & API strategy
 ```
@@ -363,6 +385,7 @@ If the URL is unreachable, `MockGolfInterceptor` serves embedded demo data autom
 
 | Document | Contents |
 |----------|----------|
+| [docs/demo/app-demo.webm](docs/demo/app-demo.webm) | Screen recording — full app walkthrough |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Design decisions, REST API strategy, requirements mapping |
 | [docs/screenshots/README.md](docs/screenshots/README.md) | How to capture demo screenshots |
 

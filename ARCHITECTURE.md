@@ -153,9 +153,11 @@ Run: `./gradlew testDebugUnitTest`
 | ViewBinding over DataBinding | Simpler, type-safe; pairs cleanly with StateFlow |
 | Page size 5 | Makes pagination visible with 12 mock shots |
 
-## Demo Screenshots
+## Demo Screenshots & Video
 
-Capture these before submission and save to [`docs/screenshots/`](docs/screenshots/). See [`docs/screenshots/README.md`](docs/screenshots/README.md) for capture steps.
+**Screen recording:** [docs/demo/app-demo.webm](docs/demo/app-demo.webm) (also embedded in [README.md](README.md#app-demo))
+
+Capture stills before submission and save to [`docs/screenshots/`](docs/screenshots/). See [`docs/screenshots/README.md`](docs/screenshots/README.md) for capture steps.
 
 | # | Screen | File (suggested) |
 |---|--------|----------------|
